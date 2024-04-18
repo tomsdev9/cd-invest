@@ -1,0 +1,56 @@
+/* src/components/Footer/Footer.css */
+.footer {
+    display: flex;
+    flex-direction: column; /* Changez à column pour empiler les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    justify-content: space-between;
+    padding: 20px 50px;
+    background-color: #000000;
+    color: white;
+    text-align: center; /* Centre le texte pour tous les enfants si nécessaire */
+}
+
+.footer-section {
+    display: flex;
+    width: 100%; /* S'assure que les sections utilisent toute la largeur */
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+}
+
+.logo-section {
+    flex: 1; /* Pour que le logo ait une part de l'espace, mais ne force pas le stretch */
+    justify-content: flex-start;
+}
+
+.links-section {
+    display: flex;
+    flex: 2;  /* Donne plus d'espace aux liens */
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Permet aux liens de passer à la ligne */
+}
+
+.reserved {
+    width: 100%; /* Utilise toute la largeur */
+    padding: 10px 0; /* Ajoute un peu de padding au-dessus et en dessous */
+    font-size: 0.8rem; /* Réduit la taille de la police pour la section réservée */
+    text-align: center; /* Centre le texte de la section réservée */
+}
+
+/* src/components/Footer/Footer.css */
+
+.links-section a {
+    margin: 10px 15px; /* Espace autour des liens */
+    font-size: 1rem; /* Taille de la police des liens */
+    color: white; /* Couleur blanche pour les liens */
+    text-decoration: none; /* Aucune décoration de texte initiale */
+    transition: transform 0.3s ease, color 0.3s ease; /* Animation fluide pour le survol */
+}
+
+.links-section a:hover {
+    text-decoration: none; /* Assurez-vous qu'aucun soulignement n'est ajouté */
+    transform: translateY(-3px); /* Déplace légèrement le lien vers le haut pour le 'surélever' */
+    color: #ccc; /* Change la couleur au survol pour un effet subtil */
+}
+

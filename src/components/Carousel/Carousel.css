@@ -1,0 +1,20 @@
+/* Appliquer un style personnalisé pour les légendes du carrousel */
+.carousel-caption {
+    position: absolute;
+    bottom: 50%; /* Remontez les légendes à 50% de la hauteur à partir du bas */
+    right: 15%;
+    left: 15%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white; /* Assurez-vous que le texte est blanc */
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Fond sombre avec opacité pour améliorer la lisibilité */
+    border-radius: 8px; /* Bordures arrondies pour un look plus doux */
+}
+
+/* Modifier le style des images pour une meilleure intégration avec le nouveau style de légende */
+.carousel-item img {
+    max-height: 800px;
+    width: 100%;
+    object-fit: cover;
+}

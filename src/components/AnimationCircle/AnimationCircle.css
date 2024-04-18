@@ -1,0 +1,72 @@
+.ac-app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: #ffffff;
+    padding: 0; /* Réduire les marges autour du conteneur */
+}
+
+.ac-circle {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Organise les éléments enfants en colonne */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0.5rem; /* Réduire les marges entre les cercles */
+    border-radius: 50%;
+    width: 350px; /* Agrandir les cercles */
+    height: 350px;
+    background-color: #fff;
+    border: 2px solid black; /* Contour noir */
+    color: black; /* Texte noir */
+    font-size: 16px; /* Taille de police ajustée */
+    transition: all 0.3s ease;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23), 0 0 15px 3px rgba(0,0,0,0.6); /* Ajout de l'ombre externe pour l'effet de brillance */
+    padding: 20px; /* Ajoutez un peu de padding pour éviter que le texte touche les bords */
+    overflow: hidden; /* Empêche le débordement du contenu */
+}
+
+.ac-circle-title {
+    font-size: 20px; /* Augmentez un peu la taille pour le titre */
+    font-weight: bold;
+    margin-bottom: 10px; /* Espace entre le titre et le contenu */
+    color: #071E2D;
+}
+
+.ac-circle-content {
+    font-size: 12px; /* Ajustement pour la lisibilité */
+    text-align: center; /* Centrer le texte */
+    padding: 0 10px; /* Padding pour un peu de respiration autour du texte */
+    overflow: auto; /* Permet le défilement si le texte est trop long */
+    max-height: 50%; /* Limite la hauteur du paragraphe pour éviter le débordement */
+}
+
+.ac-circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23), 0 0 20px 5px rgba(0,0,0,0.8); /* Augmentation de l'effet de brillance lors du survol */
+}
+  
+.ac-circle:active {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.19), 0px 3px 3px rgba(0, 0, 0, 0.23);
+}
+
+@keyframes ac-blink {
+    0%, 100% {
+        opacity: 1; /* Complètement visible */
+    }
+    50% {
+        opacity: 0; /* Complètement transparent */
+    }
+}
+
+.ac-click-here {
+    animation: ac-blink 1s linear infinite; /* Applique l'animation de clignotement */
+    bottom: 10px; /* Ajustez selon les besoins spécifiques pour la position */
+    transform: translateX(-50%);
+    color: #4F46E5; /* Couleur du texte */
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 60px;
+}
